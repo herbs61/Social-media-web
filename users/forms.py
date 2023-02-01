@@ -1,6 +1,23 @@
 from django import forms
 from django.contrib.auth.models import User
+from .models import Profile
 
+# When creating a profile for the user
+class UserEditForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ('first_name','last_name','email')
+        
+class ProfileEditForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = ('photo',)
+        
+        
+                
+
+
+# When creating a login form
 class LoginForm(forms.Form):
     username = forms.CharField()
     password = forms.CharField(widget=forms.PasswordInput)
@@ -22,4 +39,6 @@ class UserRegistrationForm(forms.ModelForm):
             if self.cleaned_data['password'] != self.cleaned_data['password2']:
                 raise forms.ValidationError('Password do not match')
             return self.cleaned_data['password2']
+        
+
     

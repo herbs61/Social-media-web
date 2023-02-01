@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-
-<form action="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-<input type="submit">
-</form>
-=======
 <form method="POST">
     {% csrf_token%}
     {{ form.as_p }}
     <input type="submit" >
 </form>
 <p><a href="{% url 'password_reset' %}"> Forgot password? Click here to reset</a></p>
->>>>>>> 0dde36b (Update)
