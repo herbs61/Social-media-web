@@ -24,7 +24,6 @@ class LoginForm(forms.Form):
     
     # Creating a registration form
 class UserRegistrationForm(forms.ModelForm):
-    
     # You want to create you own label so that it does not automatically give you password1 and password2 
     password = forms.CharField(label='Password',widget=forms.PasswordInput)
     password2 = forms.CharField(label='Confirm password',widget=forms.PasswordInput)

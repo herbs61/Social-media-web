@@ -1,10 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth import authenticate,login
-from .forms import LoginForm,UserRegistrationForm
+from .forms import LoginForm,UserRegistrationForm,UserEditForm,ProfileEditForm
 from django.contrib.auth.decorators import login_required
 from .models import Profile
-from .forms import UserEditForm,ProfileEditForm
 
 
 # Create your views here.
